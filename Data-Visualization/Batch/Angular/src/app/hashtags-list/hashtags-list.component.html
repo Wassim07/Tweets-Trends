@@ -1,0 +1,19 @@
+<h6 class="text-center">Hashtags Statistics</h6>
+<br/>
+<table class="table table-sm table-hover">
+  <tr *ngFor="let label of labels ; let i = index">
+    <td>{{label}}</td>
+    <td>{{data[i]}}</td>
+  </tr>
+</table>
+
+<button class="btn-primary text-center" (click)="showCharts()">Show</button>
+<br/><br/><br/>
+<div>
+  <div class="col-md-6">
+    <charts [data]="data" [labels]="labels" *ngIf="show"></charts>
+  </div>
+  <div class="col-md-6">
+    <bar-charts [data]="data" [labels]="labels" *ngIf="show"></bar-charts>
+  </div>
+</div>

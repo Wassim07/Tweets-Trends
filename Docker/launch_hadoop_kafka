@@ -1,0 +1,4 @@
+#!/bin/bash
+
+/root/start-hadoop.sh
+/root/start-kafka-zookeeper.sh
